@@ -1,7 +1,4 @@
 (function(){
-
-  console.log('jquery loaded');
-
   
   $('input#url').blur(function() {
     var url = $(this).val();
@@ -16,9 +13,6 @@
         });
     }
 
-
   });
-
-
 
 })();
