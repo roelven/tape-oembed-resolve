@@ -7,8 +7,11 @@
       $.ajax({
             url: "http://www.tape.tv/services/oembed?url=" + url,
             dataType: 'json',
-            success: function(data){
-                $('#embedcode').html(data.html);
+            success: function (data, status, error) {
+              console.log('success', data);
+            },
+            error: function (data, status, error) {
+              console.log('error', data, status, error);
             }
         });
     }
