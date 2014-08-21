@@ -16,12 +16,14 @@
 
   });
 
-  var url = window.location.hash,
+  if (window.location.host.toLowerCase().indexOf('tape.tv') >= 0) {
+    var url = window.location.hash,
       hash = url.split('#')[1];
 
-  if (hash) {
-    $('input#url').val(hash);
-  }
+    if (hash) {
+      $('input#url').val(hash);
+    }
+   }
 
   $('input#url').blur(function() {
     var link = $(this).val();
