@@ -69,23 +69,34 @@ textarea {
 }
 
 form {
-    margin: 40px;
+    margin: 40px 40px 40px 0px;
     width: 250px;
 }
 
-form#url, form#embedcode {
+form > #url {
+    margin-bottom: 20px;
+}
+
+form > #url, form > #embedcode {
     padding: 3px;
     clear: both;
-    width: 200px;
+    width: 300px;
 }
 form > textarea {
     height: 100px;
+    font-size: 11px;
     font-family: Courier;
 }
 
 form > label {
-    padding: 3px 20px 3px 3px;
-    clear: both;
+    padding: 8px 0px;
+    display: block;
+}
+
+.error {
+    color: #DD4223;
+    display: block;
+    margin-top: 5px;
 }
 
 

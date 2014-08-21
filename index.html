@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="http://www.tape.tv/assets/application-28f4c49af9f16cfed00657ce96a7b64e.css">
 
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -24,17 +25,24 @@
 
             <form action="">
                 <label for="url">Paste your tape.tv link here:</label>
-                <input type="text" placeholder="tape.tv url" id="url" autofocus>
+                <input type="text" placeholder="tape.tv url" id="url" tabindex="1" autofocus>
 
                 <label for="embedcode">Embed code</label>
-                <textarea id="embedcode"></textarea>
+                <textarea tabindex="2" id="embedcode" readonly></textarea>
+                <span class="error"></span>
             </form>
+
+            <p>
+            <button tabindex="3" id="btn_copy" href="#" class="btn btn-blue btn-md" title="Copy to clipboard" data-clipboard-target="fe_text" data-clipboard-text="Embed code">Copy</button>
+</p>
 
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
+        <script src="js/vendor/ZeroClipboard.min.js"></script>
         <script src="js/main.js"></script>
+
     </body>
 </html>
